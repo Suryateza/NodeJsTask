@@ -1,0 +1,13 @@
+Admin APIs:
+
+Create Admin:
+curl --location 'http://localhost:3000/admin/users/createAdmin' \
+--header 'Content-Type: application/json' \
+--data '{"username":"admin", "password":"123456" }'
+
+Create User (admin only):
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your_access_token>" -d '{ "username":"user1", "password":"123456" }' http://localhost:3000/admin/users
+
+
+Edit User (admin only):
+curl -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer <your_access_token>" -d '{ "username":"user1", "password":"123456" }' http://localhost:3000/admin/users/<user_id>

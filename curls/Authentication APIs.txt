@@ -1,0 +1,6 @@
+Authentication APIs:
+Login:
+curl -X POST -H "Content-Type: application/json" -d '{"username":"admin", "password":"123456"}' http://localhost:3000/auth/login
+
+Logout:
+curl -X POST -H "Authorization: Bearer <your_access_token>" http://localhost:3000/auth/logout

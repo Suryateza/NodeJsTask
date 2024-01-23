@@ -1,0 +1,8 @@
+
+Group Messages (Normal User):
+
+Send Message in Group:
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your_access_token>" -d '{"content":"Hello, group!"}' http://localhost:3000/groups/<group_id>/messages
+
+Like Message:
+curl -X POST -H "Authorization: Bearer <your_access_token>" http://localhost:3000/messages/<message_id>/like

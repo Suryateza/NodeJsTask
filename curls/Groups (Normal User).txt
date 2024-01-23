@@ -1,0 +1,13 @@
+Groups (Normal User):
+Create Group:
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your_access_token>" -d '{"name":"Group 1"}' http://localhost:3000/groups
+
+Delete Group:
+curl -X DELETE -H "Authorization: Bearer <your_access_token>" http://localhost:3000/groups/<group_id>
+
+
+Search Groups:
+curl -H "Authorization: Bearer <your_access_token>" http://localhost:3000/groups
+
+Add Members to Group:
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your_access_token>" -d '{"userIds":[1,2,3]}' http://localhost:3000/groups/<group_id>/members
